@@ -2,12 +2,12 @@
 DataService ds = new DataService();
 int x = 3;
 string res = ds.SaveToFileTextData(x);
-Console.Title = "Спринт #4 | Выполнил: Шахов Д.К | ИИПБ-24-2";
+Console.Title = "Спринт #5 | Выполнил: Шахов Д.К | ИИПБ-24-2";
 Console.WriteLine("******************************************************************************************");
-Console.WriteLine("* Спринт #4                                                                              *");
+Console.WriteLine("* Спринт #5                                                                              *");
 Console.WriteLine("* Тема: Класс File. Запись данных в текстовый файл                                       *");
-Console.WriteLine("* Задание #7                                                                             *");
-Console.WriteLine("* Вариант #8                                                                             *");
+Console.WriteLine("* Задание #0                                                                             *");
+Console.WriteLine("* Вариант #27                                                                             *");
 Console.WriteLine("* Выполнил: Шахов Даниил Константинович | ИИПБ-24-2                                      *");
 Console.WriteLine("******************************************************************************************");
 Console.WriteLine("* УСЛОВИЕ:                                                                               *");
