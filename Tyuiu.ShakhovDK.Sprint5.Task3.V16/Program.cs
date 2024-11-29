@@ -1,0 +1,32 @@
+﻿using Tyuiu.ShakhovDK.Sprint5.Task3.V16.Lib;
+DataService ds = new DataService();
+int x = 3;
+string res = ds.SaveToFileTextData(x);
+string valuearray = File.ReadAllText(res);
+Console.Title = "Спринт #5 | Выполнил: Шахов Д.К | ИИПБ-24-2";
+Console.WriteLine("******************************************************************************************");
+Console.WriteLine("* Спринт #5                                                                              *");
+Console.WriteLine("* Тема: Потоковый метод записи данных в бинарный файл                                    *");
+Console.WriteLine("* Задание #3                                                                             *");
+Console.WriteLine("* Вариант #16                                                                            *");
+Console.WriteLine("* Выполнил: Шахов Даниил Константинович | ИИПБ-24-2                                      *");
+Console.WriteLine("******************************************************************************************");
+Console.WriteLine("* УСЛОВИЕ:                                                                               *");
+Console.WriteLine("Дано выражение вычислить его значение при x = 3,\n" +
+    "Результат сохранить в бинарный файл OutPutFileTask3.bin и вывести на консоль.\n" +
+    "Округлить до трёх знаков после запятой.");
+Console.WriteLine("******************************************************************************************");
+Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                                       *");
+Console.WriteLine("******************************************************************************************");
+Console.WriteLine("          2                                                                               ");
+Console.WriteLine("        2x - 1                                                                            ");
+Console.WriteLine("y(x) = --------                                                                           ");
+Console.WriteLine("       |------                                                                           ");
+Console.WriteLine("       | 2                                                                               ");
+Console.WriteLine(@"      \|x - 2                                                                            ");
+Console.WriteLine("******************************************************************************************");
+Console.WriteLine($"Файл\n {res}\nСоздан");
+Console.WriteLine("Записанный результат:");
+Console.WriteLine(valuearray);
+Console.WriteLine("******************************************************************************************");
+Console.ReadKey();
