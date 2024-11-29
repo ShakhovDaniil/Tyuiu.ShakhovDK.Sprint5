@@ -1,6 +1,7 @@
 ﻿using Tyuiu.ShakhovDK.Sprint5.Task4.V4.Lib;
 DataService ds = new DataService();
-string path = Path.Combine(Convert.ToString(Path.GetTempPath()), "InPutDataFileTask4V4.txt");
+string path = @"C:\DataSprint5\InPutDataFileTask4V4.txt";
+double res = ds.LoadFromDataFile(path);
 Console.Title = "Спринт #5 | Выполнил: Шахов Д.К | ИИПБ-24-2";
 Console.WriteLine("******************************************************************************************");
 Console.WriteLine("* Спринт #5                                                                              *");
@@ -24,6 +25,6 @@ Console.WriteLine("y(x) = -------                                               
 Console.WriteLine("       cos(x)                                                                             ");
 Console.WriteLine("******************************************************************************************");
 Console.WriteLine("* РЕЗУЛЬТАТ:                                                                             *");
-Console.WriteLine(ds.LoadFromDataFile(path));
+Console.WriteLine(res);
 Console.WriteLine("******************************************************************************************");
 Console.ReadKey();
