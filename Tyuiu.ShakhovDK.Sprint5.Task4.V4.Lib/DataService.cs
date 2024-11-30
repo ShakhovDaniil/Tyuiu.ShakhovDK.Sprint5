@@ -6,6 +6,7 @@ namespace Tyuiu.ShakhovDK.Sprint5.Task4.V4.Lib
         public double LoadFromDataFile(string path)
         {
             string x = File.ReadAllText(path);
+            x = x.Replace(".", ",");
             double y =  Math.Round(0.25 * Convert.ToDouble(x) / Math.Cos(Convert.ToDouble(x)), 3);
             return y;
         }
