@@ -16,7 +16,6 @@ namespace Tyuiu.ShakhovDK.Sprint5.Task7.V25.Lib
             string input = File.ReadAllText(path);
             string pattern = @"\b[a-zA-Z]+\b";
             string res = Regex.Replace(input, pattern, "");
-            res = Regex.Replace(res, ",", "");
             res = Regex.Replace(res, @"\s+", " ").Trim();
             File.AppendAllText(pathSavefile, res);
             return pathSavefile;
