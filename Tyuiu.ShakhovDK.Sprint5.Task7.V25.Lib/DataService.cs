@@ -6,7 +6,7 @@ namespace Tyuiu.ShakhovDK.Sprint5.Task7.V25.Lib
     {
         public string LoadDataAndSave(string path)
         {
-            string pathSavefile = $@"C:\DataSprint5\OutPutDataFileTask7V25.txt";
+            string pathSavefile = Path.Combine(Convert.ToString(Path.GetTempPath()),"OutPutDataFileTask7V25.txt");
             FileInfo fileinfo = new FileInfo(pathSavefile);
             bool fileExists = fileinfo.Exists;
             if (fileExists)
@@ -17,6 +17,7 @@ namespace Tyuiu.ShakhovDK.Sprint5.Task7.V25.Lib
             string pattern = @"\b[a-zA-Z]+\b";
             string res = Regex.Replace(input, pattern, "");
             res = Regex.Replace(res, ",", "");
+            res = Regex.Replace(res, @"\s+", " ").Trim();
             File.AppendAllText(pathSavefile, res);
             return pathSavefile;
         }

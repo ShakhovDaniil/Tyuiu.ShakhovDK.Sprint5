@@ -7,7 +7,7 @@ namespace Tyuiu.ShakhovDK.Sprint5.Task7.V25.Test
         [TestMethod]
         public void TestMethod1()
         {
-            string pathSavefile = $@"C:\DataSprint5\OutPutDataFileTask7V25.txt";
+            string pathSavefile = Path.Combine(Convert.ToString(Path.GetTempPath()), "OutPutDataFileTask7V25.txt");
             FileInfo fileInfo = new FileInfo(pathSavefile);
             bool test_res = fileInfo.Exists;
             bool wait = true;

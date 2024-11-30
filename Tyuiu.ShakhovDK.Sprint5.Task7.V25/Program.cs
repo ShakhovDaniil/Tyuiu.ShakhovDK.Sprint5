@@ -1,7 +1,7 @@
 ﻿using Tyuiu.ShakhovDK.Sprint5.Task7.V25.Lib;
 DataService ds = new DataService();
 string path = @"C:\DataSprint5\InPutDataFileTask7V25.txt";
-string pathSavefile = $@"C:\DataSprint5\OutPutDataFileTask7V25.txt";
+string pathSavefile = Path.Combine(Convert.ToString(Path.GetTempPath()), "OutPutDataFileTask7V25.txt");
 string res = ds.LoadDataAndSave(path);
 Console.Title = "Спринт #5 | Выполнил: Шахов Д.К | ИИПБ-24-2";
 Console.WriteLine("******************************************************************************************");
