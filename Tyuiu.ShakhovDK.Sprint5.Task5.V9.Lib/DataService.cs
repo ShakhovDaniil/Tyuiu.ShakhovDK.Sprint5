@@ -5,16 +5,18 @@ namespace Tyuiu.ShakhovDK.Sprint5.Task5.V9.Lib
     {
         public double LoadFromDataFile(string path)
         {
+            string data = File.ReadAllText(path);
+            string[] f_array = data.Split(' ');
             double res = 0;
-            using (StreamReader reader = new StreamReader(path))
+            for (int i = 0; i < f_array.Length; i++)
             {
-                string line;
-                while ((line = reader.ReadLine()) != null)
+                f_array[i] = f_array[i].Replace(".", ",");
+            }
+            foreach (string s in f_array)
+            {
+                if (Convert.ToDouble(s) > res)
                 {
-                    if (Convert.ToDouble(line)  > res)
-                    {
-                        res = Convert.ToDouble(line);
-                    }
+                    res = Convert.ToDouble(s);
                 }
             }
             return Math.Round(res, 3);
