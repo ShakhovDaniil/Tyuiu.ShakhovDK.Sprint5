@@ -17,6 +17,7 @@ namespace Tyuiu.ShakhovDK.Sprint5.Task7.V25.Lib
             string pattern = @"\b[a-zA-Z]+\b";
             string res = Regex.Replace(input, pattern, "");
             res = Regex.Replace(res, @"\s+", " ").Trim();
+            res = res.Replace(" .", ".");
             File.AppendAllText(pathSavefile, res);
             return pathSavefile;
         }
