@@ -14,12 +14,19 @@ namespace Tyuiu.ShakhovDK.Sprint5.Task5.V9.Lib
             }
             foreach (string s in f_array)
             {
-                if (Convert.ToDouble(s) > res)
+                try
                 {
-                    res = Convert.ToDouble(s);
+                    if (int.Parse(s) > res)
+                    {
+                        res = int.Parse(s);
+                    }
+                }
+                catch (System.FormatException)
+                {
+                    continue;
                 }
             }
-            return Math.Round(res, 3);
+            return res;
         }
     }
 }
